@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Box, Sidebar, BoxRow, Container, Title, Button, StyledForm, StyledInput, LiList, UlList } from './styles'
-import Ilustra from '../../assets/logo.gif'
+import React, { useState} from 'react';
+import { Box, Sidebar, BoxRow, Container, Title, Button, StyledForm, StyledInput, LiList, UlList } from './styles';
+import { ChecklistAnimation } from "../../components/LottieAnimation/ChecklistAnimation";
 import { PlusCircle,  } from '@phosphor-icons/react';
 
 export default function Home() {
@@ -27,15 +27,13 @@ export default function Home() {
                     <Title>
                         Registre seus hábitos!
                     </Title>
-                    <img src={Ilustra} alt="logo" />
+                   <ChecklistAnimation/> 
                 </Box>
                 <Sidebar>
                     <StyledForm onSubmit={handleInputSubmit}>
                         <StyledInput type="text" value={inputValue} onChange={handleInputChange} placeholder="Digite aqui" />
                         <Button type="submit">
                         <PlusCircle size={25} />
-
-
                             Adicionar</Button>
                     </StyledForm>
                     <UlList>
