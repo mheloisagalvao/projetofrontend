@@ -1,16 +1,20 @@
 import React, { useState} from 'react';
 import { Box, Sidebar, BoxRow, Container, Title, Button, StyledForm, StyledInput, LiList, UlList } from './styles';
-import { ChecklistAnimation } from "../../components/LottieAnimation/ChecklistAnimation";
+import { Player }  from '@lottiefiles/react-lottie-player';
 import { PlusCircle,  } from '@phosphor-icons/react';
 
+
 export default function Home() {
+
 
     const [inputValue, setInputValue] = useState('');
     const [listItems, setListItems] = useState([]);
 
+
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
     };
+
 
     const handleInputSubmit = (event) => {
         event.preventDefault();
@@ -20,6 +24,7 @@ export default function Home() {
         }
     };
 
+
     return (
         <Container>
             <BoxRow>
@@ -27,7 +32,13 @@ export default function Home() {
                     <Title>
                         Registre seus hábitos!
                     </Title>
-                   <ChecklistAnimation/> 
+                    <Player
+                        autoplay
+                        loop
+                        src="https://assets4.lottiefiles.com/packages/lf20_v4t3yi.json"
+                        style={{ height: '300px', width: '300px' }}
+                    >
+                    </Player>
                 </Box>
                 <Sidebar>
                     <StyledForm onSubmit={handleInputSubmit}>
@@ -46,3 +57,6 @@ export default function Home() {
         </Container>
     )
 }
+
+
+
