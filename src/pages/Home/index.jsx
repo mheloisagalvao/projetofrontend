@@ -3,7 +3,6 @@ import { Box, Sidebar, BoxRow, Container, Title, Button, StyledForm, StyledInput
 import { Player }  from '@lottiefiles/react-lottie-player';
 import { PlusCircle,  } from '@phosphor-icons/react';
 
-
 export default function Home() {
 
 
